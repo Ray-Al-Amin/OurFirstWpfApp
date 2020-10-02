@@ -17,7 +17,7 @@
                 <RowDefinition Height="40" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
+                <!--<RowDefinition Height="40" />-->
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="150" />
@@ -29,9 +29,18 @@
             <Label Content="Field2" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="10 5" />
             <TextBox Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Margin="10 5" />
             <Label Content="Field3" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="10 5" />
-            <TextBox Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Margin="10 5" />
+            <ComboBox Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Margin="10 5" />
 
-            <Button Grid.Column="1" Grid.Row="5" Content="Save" Margin="10 5"/>
+            <Button Grid.Column="1" Grid.Row="4" Content="Save" Margin="10 5"/>
+
+            <DataGrid Grid.Row="3" Grid.ColumnSpan="2" Margin="5">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Firstname"/>
+                    <DataGridTextColumn Header="Lastname"/>
+                    <DataGridComboBoxColumn Header="Program"/>
+                    <DataGridCheckBoxColumn Header="IsStudent"/>
+                </DataGrid.Columns>
+            </DataGrid>
 
         </Grid>
     </Grid>
